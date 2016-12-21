@@ -8,6 +8,7 @@ console.log('Server running at http://localhost:' + port)
 
 app.get('/', (req, res) => {
   res.set('Content-Type', 'text/plain');
-  res.send(`Hello World`);
+  secret = process.env.MYSUPERSECRET || 'no secret set'
+  res.send(`Hello World ` + secret);
   return res.end();
 });
