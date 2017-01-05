@@ -20,7 +20,7 @@ spec:
           - name: MYSUPERSECRET
             valueFrom:
               secretKeyRef:
-                name: my-secret
+                name: {{.APP_NAME}}
                 key: supersecret
       - name: proxy
         image: quay.io/ukhomeofficedigital/nginx-proxy:v1.6.1
